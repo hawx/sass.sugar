@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <syntax name="styling.sass">
     <zones>
+    	<zone name="keyword.important.sass">
+    		<expression>\!\s*important</expression>
+    	</zone>
+    
     	<zone name="at-rule.import.sass">
     		<starts-with>
     		    <expression>^\s*((@)import\b)</expression>
@@ -162,10 +166,6 @@
 							</zone>
 						</subzones>
 					</zone>
-					
-					<zone name="keyword.important.sass">
-						<expression>\!\s*important</expression>
-					</zone>
 				</subzones>
 			</zone>
 		</collection>
@@ -246,11 +246,6 @@
 			<zone name="mixin.definition.sass">
 				<starts-with>
 					<expression>(^=)([a-zA-Z0-9_-]+)((\()([a-zA-Z0-9_!,'" -]+)(\)))?</expression>
-					<capture number="1" name="punctuation.definition.mixin.sass"/>
-					<capture number="2" name="mixin.name.sass"/>
-					<capture number="3" name="punctuation.definition.begin"/>
-					<capture number="4" name="mixin.arguments.sass"/>
-					<capture number="5" name="punctuation.definition.end"/>
 				</starts-with>
 				<ends-with>^\s*\n</ends-with>
 				<subzones>

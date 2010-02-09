@@ -12,7 +12,7 @@ sass {
 	spell-check: disabled;
 }
 
-sass.selector, sass.selector > entity > punctuation {
+sass.selector, variable.definition.style.sass > property-name {
 	color: #3a77bf;
 }
 
@@ -24,11 +24,11 @@ sass > property-assigner, mixin.sass > property-assigner {
 	color: #3a77bf;
 }
 
-sass > property-value, mixin.sass > property-value {
+sass > property-value, mixin.sass > property-value, variable.style.sass > property-name {
 	color: #43a202;
 }
 
-sass.at-rule string, sass.at-rule string punctuation, media.css > block > punctuation, property-list.css > property-value > punctuation {
+sass.at-rule string {
 	color: #474747;
 }
 
@@ -38,7 +38,14 @@ keyword.important.sass {
 	width: 12px;
 }
 
-mixin.sass {
-	color: #3a77cf;
-	font-weight: normal;
+mixin.definition.sass {
+	color: #3a77bf;
+}
+
+mixin.sass, mixin.sass > punctuation {
+	color: #d4430d;
+}
+
+file.sass {
+	color: #43a202;
 }
