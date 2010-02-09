@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<syntax name="styling.sass">
+    <zones>
+    	<zone name="at-rule.import.sass">
+    		<starts-with>
+    		    <expression>^\s*((@)import\b)</expression>
+    		    <capture number="1" name="keyword.control"/>
+    		    <capture number="2" name="punctuation.definition.keyword"/>
+    		</starts-with>
+    		<ends-with>
+    			<expression>$</expression>
+    		    <capture number="0" name="punctuation.definition.end"/>
+    		</ends-with>
+    		<subzones>
+    			<include collection="file-name"/>
+    		</subzones>	
+    	</zone>
+    	
+    	<include collection="sass-variable"/>
+    	<include collection="sass-mixin"/>
+    	<include collection="sass-mixin-definition"/>
+    	<include collection="comments"/>
+
+    	<zone name="style.sass">
+    	    <starts-with>(?=[:.&amp;>+*#a-zA-Z@])</starts-with>
+    	    <ends-with>^\s*\n</ends-with>
+    	   	
+    	   	<subzones>
+    	   	
+    	   		<zone name="selector.psuedo.sass">
+    	   			<expression>:[a-zA-Z0-9_-]+</expression>
+    	   		</zone>
+    	   	
+    	   		<include collection="properties"/>
+
+   				<zone name="selector.class.sass">
+   					<expression>\.[a-zA-Z0-9_-]+</expression>
+   				</zone>
+   				<zone name="selector.id.sass">
+   					<expression>#[a-zA-Z0-9_-]+</expression>
+   				</zone>
+   				
+   				<zone name="selector.parent.sass">
+   					<expression>&amp;</expression>
+   				</zone>
+   				<zone name="selector.child.sass">
+   					<expression>>\s*</expression>
+   				</zone>
+   				<zone name="selector.adjacent.sass">
+   					<expression>\+\s+</expression>
+   				</zone>
+   				
+   				<zone name="selector.advanced.sass">
+   					<expression>\[[a-zA-Z0-9'"=_ -]+\]</expression>
+   				</zone>
+   				
+   				<zone name="selector.named.sass">
+   					<expression>(\*|article|area|address|acronym|abbr|a|button|rb|body|blockquote|big|base|b|colgroup|col|cite|caption|dt|dl|div|dfn|del|dd|em|frameset|frame|footer|form|fieldset|html|hr|header|head|h[1-6]|ins|input|img|iframe|i|kbd|link|li|legend|label|meta|map|noscript|noframes|nav|option|optgroup|ol|object|pre|param|p|q|sup|sub|style|strong|strike|span|small|section|select|script|samp|tt|tr|time|title|thead|th|tfoot|textarea|td|tbody|table|ul|var)</expression>
+   				</zone>
+   				
+   				<include collection="comments"/>
+   				<subzones>
+   					<include collection="comments"/>
+   				</subzones>
+    	   		
+    	   	</subzones>
+    	</zone>
+    </zones>
+    
+    
+    
+	<library>
+	
+		<collection name="properties">
+			<include collection="sass-mixin"/>
+			<zone name="property-name">
+				<expression>\b(azimuth|background-attachment|background-color|background-image|background-position|background-repeat|background|border-bottom-color|border-bottom-style|border-bottom-width|border-bottom|border-collapse|border-color|border-left-color|border-left-style|border-left-width|border-left|border-right-color|border-right-style|border-right-width|border-right|border-spacing|border-style|border-top-color|border-top-style|border-top-width|border-top|border-width|border|bottom|caption-side|clear|clip|color|content|counter-increment|counter-reset|cue-after|cue-before|cue|cursor|direction|display|elevation|empty-cells|float|family|font-family|font-size-adjust|font-size|font-stretch|font-style|font-variant|font-weight|font|height|left|letter-spacing|line-height|list-style-image|list-style-position|list-style-type|list-style|margin-bottom|margin-left|margin-right|margin-top|marker-offset|margin|marks|max-height|max-width|min-height|min-width|-moz-border-radius|orphans|outline-color|outline-style|outline-width|outline|overflow|opacity|padding-bottom|padding-left|padding-right|padding-top|padding|page-break-after|page-break-before|page-break-inside|page|pause-after|pause-before|pause|pitch-range|pitch|play-during|position|quotes|richness|right|size|speak-header|speak-numeral|speak-punctuation|speech-rate|speak|stress|table-layout|text-align|text-decoration|text-indent|text-shadow|text-transform|top|unicode-bidi|variant|vertical-align|visibility|voice-family|volume|white-space|widows|width|word-spacing|z-index)</expression>
+			</zone>
+			<include collection="values"/>
+			
+		</collection>
+		
+		<collection name="file-name">
+			<zone name="file.sass">
+				<expression>([\/a-zA-Z0-9_-]+)(\.)([a-zA-Z0-9_-]+)</expression>
+				<capture number="2" name="punctuation.path.seperator"/>
+				<capture number="3" name="file.extension.sass"/>
+			</zone>
+		</collection>
+		
+		<collection name="comments">
+			<zone name="comment.block.sass">
+			    <starts-with>
+			        <expression>/\*</expression>
+			        <capture number="0" name="punctuation.begin"/>
+			    </starts-with>
+			    <ends-with>
+			        <expression>\*/</expression>
+			        <capture number="0" name="punctuation.end"/>
+			    </ends-with>
+			</zone>
+			<zone name="comment.line.sass">
+			    <starts-with>
+			        <expression>//</expression>
+			        <capture number="0" name="punctuation.begin"/>
+			    </starts-with>
+			    <ends-with>$</ends-with>
+			</zone>
+		</collection>
+		
+		<collection name="values">
+			<zone name="property-value">
+				<starts-with>
+					<expression>\b(\s=)|(:)(?=[^\n])</expression>
+					<capture number="0" name="punctuation.separator.key-value.sass"/>
+				</starts-with>
+				<ends-with>
+					<expression>\n</expression>
+				</ends-with>
+				<subzones>
+					<include collection="comments"/>
+					<include collection="sass-variable"/>
+					<include collection="string"/>
+					
+					<zone name="keyword.property-value.sass">
+						<expression>\b(absolute|all-scroll|always|auto|baseline|below|bidi-override|block|bold|bolder|both|bottom|break-all|break-word|capitalize|center|char|circle|col-resize|collapse|crosshair|dashed|decimal|default|disabled|disc|distribute-all-lines|distribute-letter|distribute-space|distribute|dotted|double|e-resize|ellipsis|fixed|groove|hand|help|hidden|horizontal|ideograph-alpha|ideograph-numeric|ideograph-parenthesis|ideograph-space|inactive|inherit|inline-block|inline|inset|inside|inter-ideograph|inter-word|italic|justify|keep-all|left|lighter|line-edge|line-through|line|list-item|loose|lower-alpha|lower-roman|lowercase|lr-tb|ltr|medium|middle|move|n-resize|ne-resize|newspaper|no-drop|no-repeat|nw-resize|none|normal|not-allowed|nowrap|oblique|outset|outside|overline|pointer|progress|relative|repeat-x|repeat-y|repeat|right|ridge|row-resize|rtl|s-resize|scroll|se-resize|separate|small-caps|solid|square|static|strict|super|sw-resize|table-footer-group|table-header-group|tb-rl|text-bottom|text-top|text|thick|thin|top|transparent|underline|upper-alpha|upper-roman|uppercase|vertical-ideographic|vertical-text|visible|w-resize|wait|whitespace)\b</expression>
+					</zone>
+					<zone name="zconstant.nzumeric.sass">
+						<expression>(-|\+)?\s*[0-9]+(\.[0-9]+)?</expression>
+					</zone>
+					<zone name="zkeyword.other.zunit.sass">
+						<expression>(?&lt;=[\d])(px|pt|cm|mm|in|em|ex|pc|s|ms)\b|%</expression>
+					</zone>
+					<zone name="constant.font-name.sass">
+					    <expression>(\b(?i:arial|century|comic|courier|garamond|georgia|helvetica|impact|lucida|symbol|system|tahoma|times|trebuchet|utopia|verdana|webdings|sans-serif|serif|monospace)\b)</expression>
+					</zone>
+					<zone name="zconstant.zother.color.rgb-value.sass">
+						<expression>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b</expression>
+						<capture number="1" name="punctuation.definition.constant.sass"/>
+					</zone>
+					
+					<zone>
+						<starts-with>
+							<expression>(rgb|rgba|url|attr|counter|counters)\s*(\()</expression>
+							<capture number="1" name="support.function.misc.sass"/>
+							<capture number="2" name="punctuation.section.function.sass"/>
+						</starts-with>
+						<ends-with>
+							<expression>(\))</expression>
+							<capture number="1" name="punctuation.section.function.sass"/>
+						</ends-with>
+						<subzones>
+							<include collection="string"/>
+							<zone name="constant.other.color.rgb-value.sass">
+								<expression>(\b0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\b)</expression>
+							</zone>
+							<zone name="constant.other.color.rgb-percentage.sass">
+								<expression>\b([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%</expression>
+							</zone>
+							<zone name="variable.parameter.misc.sass">
+								<expression>[^'") \t]+</expression>
+							</zone>
+						</subzones>
+					</zone>
+					
+					<zone name="keyword.important.sass">
+						<expression>\!\s*important</expression>
+					</zone>
+				</subzones>
+			</zone>
+		</collection>
+		
+		<collection name="string">
+			<zone name="string.quoted.double">
+			    <starts-with>
+			        <expression>"</expression>
+			        <capture number="0" name="punctuation.definition.string.begin.css"/>
+			    </starts-with>
+			    <ends-with>
+			        <expression>"</expression>
+			        <capture number="0" name="punctuation.definition.string.end.css"/>
+			    </ends-with>
+			    <subzones>
+			        <zone name="constant.character.escaped.sass">
+			            <expression>\\.</expression>
+			        </zone>
+			    </subzones>
+			</zone>
+		</collection>
+		
+		<collection name="sass-variable">
+			<zone name="variable.definition.style.sass">
+			    <starts-with>
+			    	<expression>(!)([a-zA-Z0-9_-]+(?= =))</expression>
+			    	<capture number="1" name="punctuation.definition.variable.sass"/>
+			    	<capture number="2" name="variable.property-name.sass"/>
+			    </starts-with>
+			    <ends-with>
+			    	<expression>$</expression>
+			    </ends-with>
+			    <subzones>
+			    	<include collection="values"/>
+			    </subzones>
+			</zone>
+			<zone name="variable.style.sass">
+			    <starts-with>
+			    	<expression>(!)([a-zA-Z0-9_-]+)</expression>
+			    	<capture number="1" name="punctuation.definition.variable.sass"/>
+			    	<capture number="2" name="variable.property-name.sass"/>
+			    </starts-with>
+			    <ends-with>
+			    	<expression>\s|$|^|}</expression>
+			    </ends-with>
+			</zone>
+		</collection>
+		<collection name="sass-mixin">
+			<zone name="mixin.sass">
+				<starts-with>
+					<expression>(\+)([a-zA-Z0-9_-]+)(\()</expression>
+					<capture number="1" name="punctuation.definition.mixin.sass"/>
+					<capture number="2" name="mixin.name.sass"/>
+					<capture number="3" name="punctuation.definition.begin"/>
+				</starts-with>
+				<ends-with>
+					<expression>(\))</expression>
+					<capture number="0" name="punctuation.definition.end"/>
+				</ends-with>
+				<subzones>
+					<include collection="string"/>
+					<zone name="zconstant.nzumeric.sass">
+						<expression>(-|\+)?\s*\.?[0-9]+(\.[0-9]+)?</expression>
+					</zone>
+					<zone name="zkeyword.other.zunit.sass">
+						<expression>(?&lt;=[\d])(px|pt|cm|mm|in|em|ex|pc|s|ms)\b|%</expression>
+					</zone>
+					<zone name="punctuation.variable-seperator.sass">
+						<expression>,</expression>
+					</zone>
+					<zone name="variable.parameter.misc.sass">
+						<expression>[^'") \t]+</expression>
+					</zone>
+				</subzones>
+			</zone>
+		</collection>
+		<collection name="sass-mixin-definition">
+			<zone name="mixin.definition.sass">
+				<starts-with>
+					<expression>(^=)([a-zA-Z0-9_-]+)(\()([a-zA-Z0-9_!,'" -]+)(\))</expression>
+					<capture number="1" name="punctuation.definition.mixin.sass"/>
+					<capture number="2" name="mixin.name.sass"/>
+					<capture number="3" name="punctuation.definition.begin"/>
+					<capture number="4" name="mixin.arguments.sass"/>
+					<capture number="5" name="punctuation.definition.end"/>
+				</starts-with>
+				<ends-with>^\s*\n</ends-with>
+				<subzones>
+					<include collection="properties"/>
+				</subzones>
+			</zone>
+		</collection>
+	</library>
+</syntax>

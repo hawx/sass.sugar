@@ -1,0 +1,44 @@
+/*
+	@theme SASS Placeholder
+	@placeholder sass
+*/
+
+@base {
+	color: #000;
+	background-color: #fff;
+}
+
+sass {
+	spell-check: disabled;
+}
+
+sass.selector, sass.selector > entity > punctuation {
+	color: #3a77bf;
+}
+
+sass > property-name, mixin.sass > property-name {
+	color: #d4430d;
+}
+
+sass > property-assigner, mixin.sass > property-assigner {
+	color: #3a77bf;
+}
+
+sass > property-value, mixin.sass > property-value {
+	color: #43a202;
+}
+
+sass.at-rule string, sass.at-rule string punctuation, media.css > block > punctuation, property-list.css > property-value > punctuation {
+	color: #474747;
+}
+
+keyword.important.sass {
+	font-weight: bold;
+	color: #6700b9;
+	width: 12px;
+}
+
+mixin.sass {
+	color: #d4430d;
+	font-weight: normal;
+}

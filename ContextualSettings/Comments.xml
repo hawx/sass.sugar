@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings>
+
+	<setting name="comment-multiline-start">
+		<syntax-context>css, css *</syntax-context>
+		<value>/*</value>
+	</setting>
+
+	<setting name="comment-multiline-end">
+		<syntax-context>css, css *</syntax-context>
+		<value>*/</value>
+	</setting>
+
+	<setting name="comment-multiline-end-inert">
+		<syntax-context>css, css *</syntax-context>
+		<value>*!/</value>
+	</setting>
+
+	<setting name="comment-singleline-start">
+		<syntax-context>css, css *</syntax-context>
+		<no-value/>
+	</setting>
+	
+</settings>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings>
+
+	<language id="text.sass">
+		
+		<!-- Note: root-zone will be deprecated in the next beta and replaced by syntax-name -->
+		<root-zone>styling.sass</root-zone>
+		<name>SASS</name>
+		<detectors>
+			<extension>sass</extension>
+		</detectors>
+		
+		<default-extension>sass</default-extension>
+		
+	</language>
+	
+</settings>

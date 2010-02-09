@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<action-recipes>
+	
+	<snippet id="com.macrabbit.TextActions.CSS.OpenBracket" category="hidden">
+	
+		<title>Open Style Block</title>
+		<text-trigger key-equivalent="{"></text-trigger>
+		<text>{$0</text>
+		<syntax-context>css.selector</syntax-context>
+		
+	</snippet>
+	
+	<snippet id="com.macrabbit.TextActions.CSS.NewStyle" category="hidden">
+		<title>New Style</title>
+		<text>${1:style} {$0</text>
+		<when-disabled>hide</when-disabled>
+	</snippet>
+	
+</action-recipes>
