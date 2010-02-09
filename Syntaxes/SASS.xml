@@ -209,20 +209,20 @@
 			    	<capture number="2" name="variable.property-name.sass"/>
 			    </starts-with>
 			    <ends-with>
-			    	<expression>\s|$|^|}</expression>
+			    	<expression>$|\s|}</expression>
 			    </ends-with>
 			</zone>
 		</collection>
 		<collection name="sass-mixin">
 			<zone name="mixin.sass">
 				<starts-with>
-					<expression>(\+)([a-zA-Z0-9_-]+)(\()</expression>
+					<expression>(\+)([a-zA-Z0-9_-]+)(\()?</expression>
 					<capture number="1" name="punctuation.definition.mixin.sass"/>
 					<capture number="2" name="mixin.name.sass"/>
 					<capture number="3" name="punctuation.definition.begin"/>
 				</starts-with>
 				<ends-with>
-					<expression>(\))</expression>
+					<expression>(\))|$</expression>
 					<capture number="0" name="punctuation.definition.end"/>
 				</ends-with>
 				<subzones>
@@ -245,7 +245,7 @@
 		<collection name="sass-mixin-definition">
 			<zone name="mixin.definition.sass">
 				<starts-with>
-					<expression>(^=)([a-zA-Z0-9_-]+)(\()([a-zA-Z0-9_!,'" -]+)(\))</expression>
+					<expression>(^=)([a-zA-Z0-9_-]+)((\()([a-zA-Z0-9_!,'" -]+)(\)))?</expression>
 					<capture number="1" name="punctuation.definition.mixin.sass"/>
 					<capture number="2" name="mixin.name.sass"/>
 					<capture number="3" name="punctuation.definition.begin"/>

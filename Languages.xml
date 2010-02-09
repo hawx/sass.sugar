@@ -15,4 +15,11 @@
 		
 	</language>
 	
+	<meta>
+		<name>SASS</name>
+		<author>Joshua Hawxwell</author>
+		<download format="git">git://github.com/hawx/Sass.sugar.git</download>
+		<url>http://github.com/hawx/Sass.sugar</url>
+	</meta>
+	
 </settings>
