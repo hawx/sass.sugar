@@ -2,7 +2,7 @@
 <syntax name="styling.sass">
     <zones>
     	<zone name="keyword.important.sass">
-    		<expression>\!\s*important</expression>
+    		<expression>\!important</expression>
     	</zone>
     
     	<zone name="at-rule.import.sass">
@@ -26,7 +26,7 @@
     	<include collection="comments"/>
 
     	<zone name="style.sass">
-    	    <starts-with>(?=[:.&amp;>+*#a-zA-Z@])</starts-with>
+    	    <starts-with>(?=([.&amp;>+*#a-zA-Z@][^-]))</starts-with>
     	    <ends-with>^\s*\n</ends-with>
     	   	
     	   	<subzones>
@@ -77,9 +77,13 @@
 	
 		<collection name="properties">
 			<include collection="sass-mixin"/>
+			
 			<zone name="property-name">
-				<expression>\b(zoom|z-index|writing-mode|word-wrap|word-spacing|word-break|width|widows|white-space|weight|volume|voice-family|visibility|vertical-align|variant|unicode-bidi|type|top|text-underline-position|text-transform|text-shadow|text-overflow|text-kashida-space|text-justify|text-indent|text-decoration|text-autospace|text-align-last|text-align|table-layout|style|stress|speech-rate|speak-punctuation|speak-numeral|speak-header|speak|size|scrollbar-track-color|scrollbar-shadow-color|scrollbar-highlight-color|scrollbar-face-color|scrollbar-dark-shadow-color|scrollbar-base-color|scrollbar-arrow-color|scrollbar-3d-light-color|ruby-position |ruby-overhang|ruby-align|right|richness|repeat|quotes|position|play-during|pitch-range|pitch|pause-before|pause-after|pause|page-break-inside|page-break-before|page-break-after|page|padding-top|padding-right|padding-left|padding-bottom|padding|overflow-Y|overflow-X|overflow|outline-width|outline-style|outline-color|outline|orphans|min-width|min-height|max-width|max-height|marks|marker-offset|margin-top|margin-right|margin-left|margin-bottom|margin|list-style-type|list-style-position|list-style-image|list-style|line-height|line-break|letter-spacing|left|layout-grid-type|layout-grid-mode|layout-grid-line|layout-grid-char-spacing|layout-grid-char|layout-grid|layout-flow|layer-background-image|layer-background-color|include-source |ime-mode|image|height|font-weight|font-variant|font-style|font-stretch|font-size-adjust|font-size|font-family|font|float|filter|family|empty-cells|elevation|display|direction|cursor|cue-before|cue-after|cue|counter-reset|counter-increment|content|color|collapse|clip|clear|caption-side|bottom|border-width|border-top-width|border-top-style|border-top-color|border-top|border-style|border-spacing|border-right-width|border-right-style|border-right-color|border-right|border-left-width|border-left-style|border-left-color|border-left|border-color|border-collapse|border-bottom-width|border-bottom-style|border-bottom-color|border-bottom|border|behavior|background-repeat|background-position-y|background-position-x|background-position|background-image|background-color|background-attachment|background|azimuth|attachment|accelerator|-use-link-source|-set-link-source|-replace|-moz-user-select|-moz-user-modify|-moz-user-input|-moz-user-focus|-moz-outline-width|-moz-outline-style|-moz-outline-color|-moz-outline|-moz-opacity|-moz-border-top-colors|-moz-border-right-colors|-moz-border-radius-topright|-moz-border-radius-topleft|-moz-border-radius-bottomright|-moz-border-radius-bottomleft|-moz-border-radius|-moz-border-left-colors|-moz-border-bottom-colors|-moz-binding)</expression>
+				<expression>(?=[a-z])[a-z-]*(?=:| =)</expression>
 			</zone>
+			
+			
+			
 			<include collection="values"/>
 			
 		</collection>
@@ -129,6 +133,7 @@
 					<zone name="keyword.property-value.sass">
 						<expression>\b(absolute|all-scroll|always|auto|baseline|below|bidi-override|block|bold|bolder|both|bottom|break-all|break-word|capitalize|center|char|circle|col-resize|collapse|crosshair|dashed|decimal|default|disabled|disc|distribute-all-lines|distribute-letter|distribute-space|distribute|dotted|double|e-resize|ellipsis|fixed|groove|hand|help|hidden|horizontal|ideograph-alpha|ideograph-numeric|ideograph-parenthesis|ideograph-space|inactive|inherit|inline-block|inline|inset|inside|inter-ideograph|inter-word|italic|justify|keep-all|left|lighter|line-edge|line-through|line|list-item|loose|lower-alpha|lower-roman|lowercase|lr-tb|ltr|medium|middle|move|n-resize|ne-resize|newspaper|no-drop|no-repeat|nw-resize|none|normal|not-allowed|nowrap|oblique|outset|outside|overline|pointer|progress|relative|repeat-x|repeat-y|repeat|right|ridge|row-resize|rtl|s-resize|scroll|se-resize|separate|small-caps|solid|square|static|strict|super|sw-resize|table-footer-group|table-header-group|tb-rl|text-bottom|text-top|text|thick|thin|top|transparent|underline|upper-alpha|upper-roman|uppercase|vertical-ideographic|vertical-text|visible|w-resize|wait|whitespace)\b</expression>
 					</zone>
+
 					<zone name="zconstant.nzumeric.sass">
 						<expression>(-|\+)?\s*[0-9]+(\.[0-9]+)?</expression>
 					</zone>
@@ -204,7 +209,7 @@
 			</zone>
 			<zone name="variable.style.sass">
 			    <starts-with>
-			    	<expression>(!)([a-zA-Z0-9_-]+)</expression>
+			    	<expression>(!)(?=[^important])([a-zA-Z0-9_-]+)</expression>
 			    	<capture number="1" name="punctuation.definition.variable.sass"/>
 			    	<capture number="2" name="variable.property-name.sass"/>
 			    </starts-with>
