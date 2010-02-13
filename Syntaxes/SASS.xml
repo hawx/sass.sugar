@@ -26,7 +26,7 @@
     	<include collection="comments"/>
 
     	<zone name="style.sass">
-    	    <starts-with>(?=([.&amp;>+*#a-zA-Z@][^-]))</starts-with>
+    	    <starts-with>(?=([.&amp;>+*#a-zA-Z@-]))</starts-with>
     	    <ends-with>^\s*\n</ends-with>
     	   	
     	   	<subzones>
@@ -79,10 +79,8 @@
 			<include collection="sass-mixin"/>
 			
 			<zone name="property-name">
-				<expression>(?=[a-z])[a-z-]*(?=:| =)</expression>
+				<expression>(?=[a-z-])[a-z-]*(?=:| =)</expression>
 			</zone>
-			
-			
 			
 			<include collection="values"/>
 			
