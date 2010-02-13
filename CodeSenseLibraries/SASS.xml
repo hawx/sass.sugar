@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+	
+	<behavior>
+		<confirm-partial characters="-" />
+	</behavior>
+	
+	<set name="com.sass.property.azimuth">
+		<completion string="left-side" />
+		<completion string="far-left" />
+		<completion string="left" />
+		<completion string="center-left" />
+		<completion string="center" />
+		<completion string="center-right" />
+		<completion string="right" />
+		<completion string="far-right" />
+		<completion string="right-side" />
+		<completion string="behind" />
+		<completion string="leftwards" />
+		<completion string="rightwards" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.background">
+		<completion string="scroll" />
+		<completion string="fixed" />
+		<completion string="transparent" />
+		<completion string="none" />
+		<completion string="top" />
+		<completion string="center" />
+		<completion string="bottom" />
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="repeat" />
+		<completion string="repeat-x" />
+		<completion string="repeat-y" />
+		<completion string="no-repeat" />
+		<completion string="inherit" />
+		<completion string="@color" />
+	</set>
+	<set name="com.sass.property.background-attachment">
+		<completion string="scroll" />
+		<completion string="fixed" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.background-color">
+		<completion string="@color" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.background-image">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.background-position">
+		<completion string="top" />
+		<completion string="center" />
+		<completion string="bottom" />
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.background-repeat">
+		<completion string="repeat" />
+		<completion string="repeat-x" />
+		<completion string="repeat-y" />
+		<completion string="no-repeat" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border">
+		<completion string="@color" />
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-bottom">
+		<completion string="@color" />
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-bottom-color">
+		<completion string="@color" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-bottom-style">
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-bottom-width">
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-collapse">
+		<completion string="collapse" />
+		<completion string="separate" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-color">
+		<completion string="@color" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-left">
+		<completion string="@color" />
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-left-color">
+		<completion string="@color" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-left-style">
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-left-width">
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-right">
+		<completion string="@color" />
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-right-color">
+		<completion string="@color" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-right-style">
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-right-width">
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-spacing">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-style">
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-top">
+		<completion string="@color" />
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-top-color">
+		<completion string="@color" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-top-style">
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-top-width">
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.border-width">
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.bottom">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.caption-side">
+		<completion string="top" />
+		<completion string="bottom" />
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.clear">
+		<completion string="none" />
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="both" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.clip">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.color">
+		<completion string="@color" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.content">
+		<completion string="open-quote" />
+		<completion string="close-quote" />
+		<completion string="no-open-quote" />
+		<completion string="no-close-quote" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.counter-increment">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.counter-reset">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.cue">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.cue-after">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.cue-before">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.cursor">
+		<completion string="auto" />
+		<completion string="crosshair" />
+		<completion string="default" />
+		<completion string="pointer" />
+		<completion string="move" />
+		<completion string="e-resize" />
+		<completion string="ne-resize" />
+		<completion string="nw-resize" />
+		<completion string="n-resize" />
+		<completion string="se-resize" />
+		<completion string="sw-resize" />
+		<completion string="s-resize" />
+		<completion string="w-resize" />
+		<completion string="text" />
+		<completion string="wait" />
+		<completion string="help" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.direction">
+		<completion string="ltr" />
+		<completion string="rtl" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.display">
+		<completion string="inline" />
+		<completion string="block" />
+		<completion string="list-item" />
+		<completion string="run-in" />
+		<completion string="compact" />
+		<completion string="marker" />
+		<completion string="table" />
+		<completion string="inline-table" />
+		<completion string="table-row-group" />
+		<completion string="table-header-group" />
+		<completion string="table-footer-group" />
+		<completion string="table-row" />
+		<completion string="table-column" />
+		<completion string="table-cell" />
+		<completion string="table-caption" />
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.elevation">
+		<completion string="below" />
+		<completion string="level" />
+		<completion string="above" />
+		<completion string="higher" />
+		<completion string="lower" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.empty-cells">
+		<completion string="show" />
+		<completion string="hide" />
+	</set>
+	<set name="com.sass.property.float">
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="none" />
+	</set>
+	<set name="com.sass.property.font">
+		<completion string="inherit" />
+		<completion string="caption" />
+		<completion string="icon" />
+		<completion string="menu" />
+		<completion string="message-box" />
+		<completion string="small-caption" />
+		<completion string="status-bar" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.font-family">
+		<completion string="serif" />
+		<completion string="sans-serif" />
+		<completion string="cursive" />
+		<completion string="fantasy" />
+		<completion string="monospace" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.font-size">
+		<completion string="xx-small" />
+		<completion string="x-small" />
+		<completion string="small" />
+		<completion string="medium" />
+		<completion string="large" />
+		<completion string="x-large" />
+		<completion string="xx-large" />
+	</set>
+	<set name="com.sass.property.font-size-adjust">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.font-stretch">
+		<completion string="normal" />
+		<completion string="wider" />
+		<completion string="narrower" />
+		<completion string="ultra-condensed" />
+		<completion string="extra-condensed" />
+		<completion string="condensed" />
+		<completion string="semi-condensed" />
+		<completion string="semi-expanded" />
+		<completion string="expanded" />
+		<completion string="extra-expanded" />
+		<completion string="ultra-expanded" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.font-style">
+		<completion string="normal" />
+		<completion string="italic" />
+		<completion string="oblique" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.font-variant">
+		<completion string="normal" />
+		<completion string="small-caps" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.font-weight">
+		<completion string="normal" />
+		<completion string="bold" />
+		<completion string="bolder" />
+		<completion string="lighter" />
+		<completion string="100" />
+		<completion string="200" />
+		<completion string="300" />
+		<completion string="400" />
+		<completion string="500" />
+		<completion string="600" />
+		<completion string="700" />
+		<completion string="800" />
+		<completion string="900" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.height">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.left">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.letter-spacing">
+		<completion string="normal" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.line-height">
+		<completion string="normal" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.list-style">
+		<completion string="none" />
+		<completion string="inside" />
+		<completion string="outside" />
+		<completion string="disc" />
+		<completion string="circle" />
+		<completion string="square" />
+		<completion string="decimal" />
+		<completion string="decimal-leading-zero" />
+		<completion string="lower-roman" />
+		<completion string="upper-roman" />
+		<completion string="lower-greek" />
+		<completion string="lower-alpha" />
+		<completion string="lower-latin" />
+		<completion string="upper-alpha" />
+		<completion string="upper-latin" />
+		<completion string="hebrew" />
+		<completion string="armenian" />
+		<completion string="georgian" />
+		<completion string="cjk-ideographic" />
+		<completion string="hiragana" />
+		<completion string="katakana" />
+		<completion string="hiragana-iroha" />
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.list-style-image">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.list-style-position">
+		<completion string="inside" />
+		<completion string="outside" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.list-style-type">
+		<completion string="disc" />
+		<completion string="circle" />
+		<completion string="square" />
+		<completion string="decimal" />
+		<completion string="decimal-leading-zero" />
+		<completion string="lower-roman" />
+		<completion string="upper-roman" />
+		<completion string="lower-greek" />
+		<completion string="lower-alpha" />
+		<completion string="lower-latin" />
+		<completion string="upper-alpha" />
+		<completion string="upper-latin" />
+		<completion string="hebrew" />
+		<completion string="armenian" />
+		<completion string="georgian" />
+		<completion string="cjk-ideographic" />
+		<completion string="hiragana" />
+		<completion string="katakana" />
+		<completion string="hiragana-iroha" />
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.margin">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.margin-bottom">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.margin-left">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.margin-right">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.margin-top">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.marker-offset">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.max-height">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.max-width">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.min-height">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.min-width">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.opacity">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.orphans">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.outline">
+		<completion string="@color" />
+		<completion string="invert" />
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.outline-color">
+		<completion string="@color" />
+		<completion string="invert" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.outline-style">
+		<completion string="none" />
+		<completion string="hidden" />
+		<completion string="dotted" />
+		<completion string="dashed" />
+		<completion string="solid" />
+		<completion string="double" />
+		<completion string="groove" />
+		<completion string="ridge" />
+		<completion string="inset" />
+		<completion string="outset" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.outline-width">
+		<completion string="thin" />
+		<completion string="medium" />
+		<completion string="thick" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.overflow">
+		<completion string="visible" />
+		<completion string="hidden" />
+		<completion string="scroll" />
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.padding">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.padding-bottom">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.padding-left">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.padding-right">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.padding-top">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.page">
+		<completion string="auto" />
+	</set>
+	<set name="com.sass.property.page-break-after">
+		<completion string="auto" />
+		<completion string="always" />
+		<completion string="avoid" />
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.page-break-before">
+		<completion string="auto" />
+		<completion string="always" />
+		<completion string="avoid" />
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.page-break-inside">
+		<completion string="auto" />
+		<completion string="avoid" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.pause">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.pause-after">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.pause-before">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.pitch">
+		<completion string="x-low" />
+		<completion string="low" />
+		<completion string="medium" />
+		<completion string="high" />
+		<completion string="x-high" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.pitch-range">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.play-during">
+		<completion string="auto" />
+		<completion string="none" />
+	</set>
+	<set name="com.sass.property.position">
+		<completion string="static" />
+		<completion string="relative" />
+		<completion string="absolute" />
+		<completion string="fixed" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.quotes">
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.richness">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.right">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.size">
+		<completion string="auto" />
+		<completion string="portrait" />
+		<completion string="landscape" />
+	</set>
+	<set name="com.sass.property.speak">
+		<completion string="normal" />
+		<completion string="none" />
+		<completion string="spell-out" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.speak-header">
+		<completion string="once" />
+		<completion string="always" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.speak-numeral">
+		<completion string="digits" />
+		<completion string="continuous" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.speak-punctuation">
+		<completion string="code" />
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.speech-rate">
+		<completion string="x-slow" />
+		<completion string="slow" />
+		<completion string="medium" />
+		<completion string="fast" />
+		<completion string="x-fast" />
+		<completion string="faster" />
+		<completion string="slower" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.stress">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.table-layout">
+		<completion string="auto" />
+		<completion string="fixed" />
+	</set>
+	<set name="com.sass.property.text-align">
+		<completion string="left" />
+		<completion string="right" />
+		<completion string="center" />
+		<completion string="justify" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.text-decoration">
+		<completion string="none" />
+		<completion string="underline" />
+		<completion string="overline" />
+		<completion string="line-through" />
+		<completion string="blink" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.text-indent">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.text-shadow">
+		<completion string="inherit" />
+		<completion string="none" />
+	</set>
+	<set name="com.sass.property.text-transform">
+		<completion string="capitalize" />
+		<completion string="uppercase" />
+		<completion string="lowercase" />
+		<completion string="none" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.top">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.unicode-bidi">
+		<completion string="normal" />
+		<completion string="embed" />
+		<completion string="bidi-override" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.vertical-align">
+		<completion string="baseline" />
+		<completion string="sub" />
+		<completion string="super" />
+		<completion string="top" />
+		<completion string="text-top" />
+		<completion string="middle" />
+		<completion string="bottom" />
+		<completion string="text-bottom" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.visibility">
+		<completion string="visible" />
+		<completion string="hidden" />
+		<completion string="collapse" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.voice-family">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.volume">
+		<completion string="silent" />
+		<completion string="x-soft" />
+		<completion string="soft" />
+		<completion string="medium" />
+		<completion string="loud" />
+		<completion string="x-loud" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.white-space">
+		<completion string="normal" />
+		<completion string="pre" />
+		<completion string="nowrap" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.widows">
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.width">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.word-spacing">
+		<completion string="normal" />
+		<completion string="inherit" />
+	</set>
+	<set name="com.sass.property.z-index">
+		<completion string="auto" />
+		<completion string="inherit" />
+	</set>
+	
+	
+	<set name="com.sass.properties">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*:)|[^:]</matched-suffix>
+				<transform-into>(?1::: $0)</transform-into>
+			</append-dynamic>
+			<confirm characters=":" />
+			<partial-confirm characters="-" />
+		</behavior>
+		<completion string="azimuth" />
+		<completion string="background" />
+		<completion string="background-attachment" />
+		<completion string="background-color" />
+		<completion string="background-image" />
+		<completion string="background-position" />
+		<completion string="background-repeat" />
+		<completion string="border" />
+		<completion string="border-bottom" />
+		<completion string="border-bottom-color" />
+		<completion string="border-bottom-style" />
+		<completion string="border-bottom-width" />
+		<completion string="border-collapse" />
+		<completion string="border-color" />
+		<completion string="border-left" />
+		<completion string="border-left-color" />
+		<completion string="border-left-style" />
+		<completion string="border-left-width" />
+		<completion string="border-right" />
+		<completion string="border-right-color" />
+		<completion string="border-right-style" />
+		<completion string="border-right-width" />
+		<completion string="border-spacing" />
+		<completion string="border-style" />
+		<completion string="border-top" />
+		<completion string="border-top-color" />
+		<completion string="border-top-style" />
+		<completion string="border-top-width" />
+		<completion string="border-width" />
+		<completion string="bottom" />
+		<completion string="caption-side" />
+		<completion string="clear" />
+		<completion string="clip" />
+		<completion string="color" />
+		<completion string="content" />
+		<completion string="counter-increment" />
+		<completion string="counter-reset" />
+		<completion string="cue" />
+		<completion string="cue-after" />
+		<completion string="cue-before" />
+		<completion string="cursor" />
+		<completion string="direction" />
+		<completion string="display" />
+		<completion string="elevation" />
+		<completion string="empty-cells" />
+		<completion string="float" />
+		<completion string="font" />
+		<completion string="font-family" />
+		<completion string="font-size" />
+		<completion string="font-size-adjust" />
+		<completion string="font-stretch" />
+		<completion string="font-style" />
+		<completion string="font-variant" />
+		<completion string="font-weight" />
+		<completion string="height" />
+		<completion string="left" />
+		<completion string="letter-spacing" />
+		<completion string="line-height" />
+		<completion string="list-style" />
+		<completion string="list-style-image" />
+		<completion string="list-style-position" />
+		<completion string="list-style-type" />
+		<completion string="margin" />
+		<completion string="margin-bottom" />
+		<completion string="margin-left" />
+		<completion string="margin-right" />
+		<completion string="margin-top" />
+		<completion string="marker-offset" />
+		<completion string="max-height" />
+		<completion string="max-width" />
+		<completion string="min-height" />
+		<completion string="min-width" />
+		<completion string="opacity" />
+		<completion string="orphans" />
+		<completion string="outline" />
+		<completion string="outline-color" />
+		<completion string="outline-style" />
+		<completion string="outline-width" />
+		<completion string="overflow" />
+		<completion string="padding" />
+		<completion string="padding-bottom" />
+		<completion string="padding-left" />
+		<completion string="padding-right" />
+		<completion string="padding-top" />
+		<completion string="page" />
+		<completion string="page-break-after" />
+		<completion string="page-break-before" />
+		<completion string="page-break-inside" />
+		<completion string="pause" />
+		<completion string="pause-after" />
+		<completion string="pause-before" />
+		<completion string="pitch" />
+		<completion string="pitch-range" />
+		<completion string="play-during" />
+		<completion string="position" />
+		<completion string="quotes" />
+		<completion string="richness" />
+		<completion string="right" />
+		<completion string="size" />
+		<completion string="speak" />
+		<completion string="speak-header" />
+		<completion string="speak-numeral" />
+		<completion string="speak-punctuation" />
+		<completion string="speech-rate" />
+		<completion string="stress" />
+		<completion string="table-layout" />
+		<completion string="text-align" />
+		<completion string="text-decoration" />
+		<completion string="text-indent" />
+		<completion string="text-shadow" />
+		<completion string="text-transform" />
+		<completion string="top" />
+		<completion string="unicode-bidi" />
+		<completion string="vertical-align" />
+		<completion string="visibility" />
+		<completion string="voice-family" />
+		<completion string="volume" />
+		<completion string="white-space" />
+		<completion string="widows" />
+		<completion string="width" />
+		<completion string="word-spacing" />
+		<completion string="z-index" />
+	</set>
+	
+	<set name="com.sass.browser-specific-properties">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\s*:)|[^:]</matched-suffix>
+				<transform-into>(?1::: $0;)</transform-into>
+			</append-dynamic>
+			<confirm characters=":" />
+			<partial-confirm characters="-" />
+		</behavior>
+		<completion string="-webkit-border-image" />
+		<completion string="-webkit-border-radius" />
+		<completion string="-webkit-border-top-left-radius" />
+		<completion string="-webkit-border-top-right-radius" />
+		<completion string="-webkit-border-bottom-left-radius" />
+		<completion string="-webkit-border-bottom-right-radius" />
+		<completion string="-webkit-box-shadow" />
+		<completion string="-webkit-transform" />
+		<completion string="-webkit-user-drag" />
+		<completion string="-webkit-user-modify" />
+		<completion string="-webkit-user-select" />
+		
+		<completion string="-moz-border-radius" />
+		<completion string="-moz-border-radius-topleft" />
+		<completion string="-moz-border-radius-topright" />
+		<completion string="-moz-border-radius-bottomleft" />
+		<completion string="-moz-border-radius-bottomright" />
+		<completion string="-moz-user-modify" />
+		<completion string="-moz-user-select" />
+	</set>
+</codesense>
