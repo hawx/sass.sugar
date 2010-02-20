@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemizer>
+
+	<recipe name="sass.at-rule.collection">
+		<selector>at-rule.sass:capture(name)</selector>
+		<subrecipes>
+			<include-root-recipes/>
+		</subrecipes>
+	</recipe>
+
+	<recipe name="sass.style">
+		<start-selector>style.sass > selector.sass:capture(name)</start-selector>
+		<end-selector>property-name.sass</end-selector>
+	</recipe>
+	
+	<recipe name="sass.mixin.collection">
+		<selector>mixin.definition.sass</selector>
+		<subrecipes>
+			<include-root-recipes/>
+		</subrecipes>
+	</recipe>
+
+	<recipe name="sass.comment">
+		<class>ESCommentItem</class>
+		<selector>comment.sass</selector>
+	</recipe>
+	
+</itemizer>

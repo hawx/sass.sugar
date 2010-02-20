@@ -975,7 +975,7 @@
 		<behavior>
 			<append-dynamic>
 				<matched-suffix>(\s*:)|[^:]</matched-suffix>
-				<transform-into>(?1::: $0;)</transform-into>
+				<transform-into>(?1::: $0)</transform-into>
 			</append-dynamic>
 			<confirm characters=":" />
 			<partial-confirm characters="-" />

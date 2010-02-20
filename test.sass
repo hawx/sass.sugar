@@ -224,9 +224,10 @@ var
   td, th
     padding: 2px
 
-=left(!dist)
+=left(!dist, !pad)
   float: left
   margin-left = !dist
+  padding-left = !pad
   
 .content_navigation
   border-color = !blue
@@ -238,5 +239,5 @@ var
   border-color = !blue  
 
 #data
-  +left(10px)
+  +left(10px, 5%)
   +table-scaffolding
