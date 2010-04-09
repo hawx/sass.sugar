@@ -10,11 +10,18 @@
 
 	<recipe name="sass.style">
 		<start-selector>style.sass > selector.sass:capture(name)</start-selector>
-		<end-selector>property-name.sass</end-selector>
+		<end-selector>style.sass</end-selector>
+		<subrecipes>
+			<include-root-recipes/>
+		</subrecipes>
+	</recipe>
+	
+	<recipe name="sass.variable">
+		<selector>variable.definition.sass:capture(name)</selector>
 	</recipe>
 	
 	<recipe name="sass.mixin.collection">
-		<selector>mixin.definition.sass</selector>
+		<selector>mixin.definition.sass:capture(name)</selector>
 		<subrecipes>
 			<include-root-recipes/>
 		</subrecipes>

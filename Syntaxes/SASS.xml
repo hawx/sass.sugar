@@ -2,45 +2,36 @@
 <syntax name="styling.sass">
     <zones>
    
-    	<zone name="at-rule.import.sass">
-    		<starts-with>
-    		    <expression>^\s*((@)import\b)</expression>
-    		    <capture number="1" name="keyword.control"/>
-    		    <capture number="2" name="punctuation.definition.keyword"/>
-    		</starts-with>
-    		<ends-with>
-    			<expression>$</expression>
-    		    <capture number="0" name="punctuation.definition.end"/>
-    		</ends-with>
-    		<subzones>
-    			<include collection="file-name"/>
-    		</subzones>	
-    	</zone>
+    	<include collection="at-rules"/>
     	
     	<include collection="sass-variable"/>
     	<include collection="sass-mixin"/>
     	<include collection="sass-mixin-definition"/>
     	<include collection="comments"/>
-
-    	<zone name="style.sass">
-    	    <starts-with>(?=([.&amp;>+*#a-zA-Z@-]))</starts-with>
-    	    <ends-with>^\s*\n</ends-with>
-    	   	
-    	   	<subzones>
-    	   		<include collection="properties"/>
-				<include collection="selectors"/>
-   				<include collection="comments"/>
-   				<subzones>
-   					<include collection="comments"/>
-   				</subzones>
-    	   	</subzones>
-    	</zone>
+    	
+		<include collection="style"/>
+    	
     </zones>
     
     
     
 	<library>
-		
+		<collection name="style">
+			<zone name="style.sass">
+			    <starts-with>(?=([.&amp;>+*#a-zA-Z@-]))</starts-with>
+			    <ends-with>^\s*\n</ends-with>
+			   	
+			   	<subzones>
+			   		<include collection="properties"/>
+			   		<include collection="selectors"/>
+						<include collection="comments"/>
+						<subzones>
+							<include collection="comments"/>
+						</subzones>
+			   	</subzones>
+			</zone>
+		</collection>
+	
 		<collection name="selectors">
 			<zone name="selector.psuedo.sass">
 	   			<expression>:[a-zA-Z0-9_-]+</expression>
@@ -64,7 +55,7 @@
 			</zone>
 			
 			<zone name="selector.advanced.sass">
-				<expression>\[[a-zA-Z0-9'"#.:=_ -]+\]</expression>
+				<expression>\[[a-zA-Z0-9'"#.:^$\/=_ -]+\]</expression>
 			</zone>
 			
 			<zone name="selector.named.sass">
@@ -75,7 +66,7 @@
 		<collection name="properties">
 			<include collection="sass-mixin"/>
 			<zone name="property-name">
-				<expression>(?=[a-z-])[a-z-]*(?=:| =)</expression>
+				<expression>(?=[a-z-])[a-z-]*(?=: | =)</expression>
 			</zone>
 			<include collection="values"/>
 		</collection>
@@ -111,7 +102,7 @@
 		<collection name="values">
 			<zone name="property-value">
 				<starts-with>
-					<expression>\b(\s=)|(:)(?=[^\n])</expression>
+					<expression>(=)|(:)(?=\s)</expression>
 					<capture number="0" name="punctuation.separator.key-value.sass"/>
 				</starts-with>
 				<ends-with>
@@ -125,7 +116,7 @@
 					
 					<zone>
 						<starts-with>
-							<expression>(rgb|rgba|url|attr|counter|counters)\s*(\()</expression>
+							<expression>(url|attr|counter|counters)\s*(\()</expression>
 							<capture number="1" name="support.function.misc.sass"/>
 							<capture number="2" name="punctuation.section.function.sass"/>
 						</starts-with>
@@ -135,12 +126,6 @@
 						</ends-with>
 						<subzones>
 							<include collection="string"/>
-							<zone name="constant.other.color.rgb-value.sass">
-								<expression>(\b0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\b)</expression>
-							</zone>
-							<zone name="constant.other.color.rgb-percentage.sass">
-								<expression>\b([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%</expression>
-							</zone>
 							<zone name="variable.parameter.misc.sass">
 								<expression>[^'") \t]+</expression>
 							</zone>
@@ -184,9 +169,28 @@
 			</zone>
 		</collection>
 		<collection name="color">
-			<zone name="zconstant.zother.color.rgb-value.sass">
+			<zone name="zconstant.zother.color.hex-value.sass">
 				<expression>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b</expression>
 				<capture number="1" name="punctuation.definition.constant.sass"/>
+			</zone>
+			<zone name="zconstant.zother.color.rgb-value.sass">
+				<starts-with>
+					<expression>(rgb|rgba)\s*(\()</expression>
+					<capture number="1" name="support.function.misc.sass"/>
+					<capture number="2" name="punctuation.section.function.sass"/>
+				</starts-with>
+				<ends-with>
+					<expression>(\))</expression>
+					<capture number="1" name="punctuation.section.function.sass"/>
+				</ends-with>
+				<subzones>
+					<zone name="constant.other.color.rgb-value.sass">
+						<expression>(\b0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\b)</expression>
+					</zone>
+					<zone name="constant.other.color.rgb-percentage.sass">
+						<expression>\b([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%</expression>
+					</zone>
+				</subzones>
 			</zone>
 		</collection>
 		<collection name="important">
@@ -204,11 +208,29 @@
 			</zone>
 		</collection>
 		
+		<!-- @rules -->
+		<collection name="at-rules">
+			<zone name="at-rule.import.sass">
+				<starts-with>
+				    <expression>^\s*((@)import\b)</expression>
+				    <capture number="1" name="keyword.control"/>
+				    <capture number="2" name="punctuation.definition.keyword"/>
+				</starts-with>
+				<ends-with>
+					<expression>$</expression>
+				    <capture number="0" name="punctuation.definition.end"/>
+				</ends-with>
+				<subzones>
+					<include collection="file-name"/>
+				</subzones>	
+			</zone>
+		</collection>
+		
 		<!-- Variables -->
 		<collection name="sass-variable">
 			<zone name="variable.definition.style.sass">
 			    <starts-with>
-			    	<expression>(!)([a-zA-Z0-9_-]+(?= =))</expression>
+			    	<expression>(\$)([a-zA-Z0-9_-]+(?=:))</expression>
 			    	<capture number="1" name="punctuation.definition.variable.sass"/>
 			    	<capture number="2" name="variable.property-name.sass"/>
 			    </starts-with>
@@ -220,7 +242,7 @@
 			    </subzones>
 			</zone>
 			<zone name="variable.style.sass">
-		    	<expression>(!)(?!important)([a-zA-Z0-9_-]+)</expression>
+		    	<expression>(\$)([a-zA-Z0-9_-]+)</expression>
 		    	<capture number="1" name="punctuation.definition.variable.sass"/>
 		    	<capture number="2" name="variable.property-name.sass"/>
 			</zone>
@@ -230,27 +252,44 @@
 		<collection name="sass-mixin">
 			<zone name="mixin.sass">
 				<starts-with>
-					<expression>(\+)([a-zA-Z0-9_-]+)(\()?</expression>
+					<expression>(\+)([a-zA-Z0-9_-]+)</expression>
 					<capture number="1" name="punctuation.definition.mixin.sass"/>
 					<capture number="2" name="mixin.name.sass"/>
 					<capture number="3" name="punctuation.definition.begin"/>
 				</starts-with>
 				<ends-with>
-					<expression>(\))|$</expression>
+					<expression>$</expression>
 					<capture number="0" name="punctuation.definition.end"/>
 				</ends-with>
 				<subzones>
-					<include collection="constants"/>
+					<zone name="mixin.arguments">
+						<starts-with>
+							<expression>\(</expression>
+							<capture number="0" name="punctuation.definition.begin"/>
+						</starts-with>
+						<ends-with>
+							<expression>\)\s*$</expression>
+							<capture number="0" name="punctuation.definition.end"/>
+						</ends-with>
+						<subzones>
+							<zone name="punctuation.separator">
+								<expression>,</expression>
+							</zone>
+							<include collection="constants"/>
+							<include collection="sass-variable"/>
+						</subzones>
+					</zone>
 				</subzones>
 			</zone>
 		</collection>
 		<collection name="sass-mixin-definition">
 			<zone name="mixin.definition.style.sass">
 				<starts-with>
-					<expression>(^=)([a-zA-Z0-9_-]+)((\()([a-zA-Z0-9_!,'" -]+)(\)))?</expression>
+					<expression>(^=)([a-zA-Z0-9_-]+)((\()([a-zA-Z0-9_!$,'" -]+)(\)))?</expression>
 				</starts-with>
-				<ends-with>^\s*\n</ends-with>
+				<ends-with>\s*\n</ends-with>
 				<subzones>
+					<include collection="style"/>
 					<include collection="properties"/>
 				</subzones>
 			</zone>

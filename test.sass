@@ -26,7 +26,7 @@ var
 
 // Test properties
 *
-  azimuth:
+  azimuth: center-left
   
 
   background: #00ff00 url('smiley.gif') no-repeat fixed center
@@ -37,11 +37,11 @@ var
   background-repeat: no-repeat
   //
   background: 
-    attachment:
-    color:
-    image:
-    position:
-    repeat:
+    attachment: 
+    color: 
+    image: 
+    position: 
+    repeat:  
   
   border: 5px solid red
   border-bottom: 5px solid red
@@ -63,15 +63,15 @@ var
   border-top-style: solid
   border-top-width: 5px
   //
-  border:
-    collapse:
-    bottom:
-    left:
-    top:
-    right:
-      color:
-      style:
-      width:
+  border: 
+    collapse: 
+    bottom: 
+    left: 
+    top: 
+    right: 
+      color: 
+      style: 
+      width: 
   
   bottom: 10px
   
@@ -103,12 +103,12 @@ var
   font-variant: small-caps
   font-weight: bold
   //
-  font:
-    family:
-    size:
-    style:
-    variant:
-    weight:
+  font: 
+    family: 
+    size: 
+    style: 
+    variant: 
+    weight: 
   
   
   height: 1230px
@@ -123,10 +123,10 @@ var
   list-style-position: inside
   list-style-type: square
   //
-  list-style:
-    image:
-    position:
-    type:
+  list-style: 
+    image: 
+    position: 
+    type: 
   
   
   margin: 23px
@@ -135,11 +135,11 @@ var
   margin-right: 2px
   margin-top: 2000000px
   //
-  margin:
-    bottom:
-    left:
-    right:
-    top:
+  margin: 
+    bottom: 
+    left: 
+    right: 
+    top: 
   
   max-height: 200px
   max-width: 1px
@@ -152,10 +152,10 @@ var
   outline-style: dotter
   outline-width: thick
   //
-  outline:
-    color:
-    style:
-    width:
+  outline: 
+    color: 
+    style: 
+    width: 
   
   overflow: scroll
   
@@ -166,11 +166,11 @@ var
   padding-right: 2px
   padding-top: 1px
   //
-  padding:
-    top:
-    left:
-    right:
-    bottom:
+  padding: 
+    top: 
+    left: 
+    right: 
+    bottom: 
   
   page-break-after: always
   page-break-before: always
@@ -200,7 +200,7 @@ var
   
   
   width: 460px
-  word-spacing: .2em!important
+  word-spacing: .2em$important
   
   z-index: 999
   
@@ -214,8 +214,8 @@ var
 // Test SASS-ness
 @import /path/file.sass
 
-!blue = #3bbfce
-!margin = 16px
+$blue: #3bbfce
+$margin: 16px
 
 =table-scaffolding
   th
@@ -224,20 +224,27 @@ var
   td, th
     padding: 2px
 
-=left(!dist, !pad)
+=left($dist, $pad)
   float: left
-  margin-left = !dist
-  padding-left = !pad
+  margin-left: $dist
+  padding-left: $pad
+  
+=right($dist, $pad)
+  float: right
   
 .content_navigation
-  border-color = !blue
-  color = !blue - #111
+  border-color: $blue
+  color: $blue - #111
+  
+  &:hover
+    opacity: .9
+    
   
 .border
-  padding = !margin / 2
-  margin = !margin / 2
-  border-color = !blue  
+  padding: $margin / 2
+  margin: $margin / 2
+  border-color: $blue  
 
 #data
   +left(10px, 5%)
-  +table-scaffolding
+  +table-scaffolding($var, rgb(100, 200, 300), 500)
