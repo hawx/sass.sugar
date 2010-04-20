@@ -5,7 +5,7 @@ require 'haml/exec'
 
 input = STDIN.read
 Dir.chdir(ENV['E_DIRECTORY'])
-arg = ["--from", "sass", "--to", "css", ENV['E_FILENAME']]
-o = Haml::Exec::SassConvert.new(arg)
+arg = [ENV['E_FILENAME']]
+o = Haml::Exec::Sass.new(arg)
 
 print %{#{o.parse!}}

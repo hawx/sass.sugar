@@ -12,4 +12,4 @@ To use the sass convert features you don't need to do anything different, but I 
 
 Open Espresso's preferences and navigate to Advanced. Then in the table called 'Custom shell variables', add an entry with name `SASS_DIRECTORY`, and set the value to the name of the folder you usually use for .sass files (eg. I set it to `_sass`). Then add another called `CSS_DIRECTORY` and set the value to the folder you usually use for css files (eg. `css`).
 
-__NOTE__: You cannot set per-project settings for this
+__NOTE__: You cannot set per-project settings for this.
