@@ -1,0 +1,228 @@
+// Test selectors
+*, a, abbr, acronym, address, area, b, base, bdo, big, blockquote, body, br, button, caption, cite, code, col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, frame, frameset, h1, h2, h3, h4, h5, h6, head, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, link, map, meta, noframes, noscript, object, ol, optgroup, option, p, param, pre, q, samp, script, select, span, strong, style, sub, sup, table, tbody, td, textarea, tfoot, th, thead, title, tr, tt, ul, var
+  display: none
+
+#id .class a #another .oncemore li ul #id-again_1, #item:active:after:before:first-child:hover, #item[href="#important"]
+  color: white
+
+
+// Test properties
+*
+  azimuth: center-left
+  
+
+  background: #00ff00 url('smiley.gif') no-repeat fixed center
+  background-attachment: fixed
+  background-color: #00ff00
+  background-image:  url("smiley.gif")
+  background-position: center
+  background-repeat: no-repeat
+  //
+  background: 
+    attachment: fixed
+    color: #00ff00
+    image: url("smiley.gif")
+    position: center
+    repeat:  no-repeat
+  
+  border: 5px solid red
+  border-bottom: 5px solid red
+  border-bottom-color: red
+  border-bottom-style: solid
+  border-bottom-width: 5px
+  border-color: red
+  border-collapse: collapse
+  border-left: 5px solid red
+  border-left-color: red
+  border-left-style: solid
+  border-left-width: 5px
+  border-right: 5px solid red
+  border-right-color: red
+  border-right-style: solid
+  border-right-width: 5px
+  border-top: 5px solid red
+  border-top-color: red
+  border-top-style: solid
+  border-top-width: 5px
+  //
+  border: 
+    collapse: collapse
+    bottom: 1px solid
+    left: 1px dashed
+    top: 5px solid
+    right: 
+      color: red
+      style: dotted
+      width: 200px
+  
+  bottom: 10px
+  
+  
+  caption-side: bottom
+  clear: both
+  clip: rect(0px, 60px, 200px, 0px)
+  color: #fff000, rgb(100, 50, 25)
+  content: " (" attr(href) ")"
+  
+  counter-increment: section
+  counter-reset: section
+  cursor: help
+  
+  
+  direction: rtl
+  display: none
+  
+  
+  empty-cells: hide
+  
+  
+  float: left
+  
+  font: italic bold 12px/30px Georgia, serif
+  font-family: Georgia, serif
+  font-size: 12px
+  font-style: italic
+  font-variant: small-caps
+  font-weight: bold
+  //
+  font: 
+    family: Helvetica
+    size: 12px
+    style: italic
+    variant: small-caps
+    weight: 700
+  
+  
+  height: 1230px
+  
+  
+  left: 20px
+  letter-spacing: .1em
+  line-height: 1.5em
+  
+  list-style: square inside url("/images/blueball.gif")
+  list-style-image: url("/images/blueball.gif")
+  list-style-position: inside
+  list-style-type: square
+  //
+  list-style: 
+    image: url("/images/blueball.gif")
+    position: inside
+    type: square
+  
+  
+  margin: 23px
+  margin-bottom: 12px
+  margin-left: 4px
+  margin-right: 2px
+  margin-top: 2000000px
+  //
+  margin: 
+    bottom: 1px
+    left: 5px
+    right: 300em
+    top: 50%
+  
+  max-height: 200px
+  max-width: 1px
+  min-height: 2px
+  min-width: 999px
+  
+  
+  outline: #00FF00 dotted thick
+  outline-color: #00FF00
+  outline-style: dotter
+  outline-width: thick
+  //
+  outline: 
+    color: red
+    style: inherit
+    width: thick
+  
+  overflow: scroll
+  
+  
+  padding: 2px
+  padding-bottom: 4px
+  padding-left: 3px
+  padding-right: 2px
+  padding-top: 1px
+  //
+  padding: 
+    top: 1px
+    left: 1px
+    right: 1px
+    bottom: 1px
+  
+  page-break-after: always
+  page-break-before: always
+  page-break-inside: avoid
+  
+  position: absolute  
+  
+  right: 10px
+  
+  
+  table-layout: fixed
+  text-align: left
+  text-decoration: underline
+  text-indent: 50px
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4)
+  text-transform: uppercase
+  
+  top: 10px
+  
+  
+  vertical-align: baseline
+  visibility: hidden
+  
+  
+  width: 460px
+  word-spacing: .2em $important
+  
+  z-index: 999
+  
+  -webkit-box-shadow: 5px
+  -o-box-shadow: 5px
+  
+  -moz-box-shadow: 5px
+  
+  
+// Test SASS-ness
+// @import test.sass
+
+$blue: #3bbfce
+$margin: 16px
+
+=table-scaffolding($var, $color, $size)
+  th
+    text-align: center
+    font-weight: bold
+  td, th
+    padding: 2px
+
+=left($dist, $pad)
+  float: left
+  margin-left: $dist
+  padding-left: $pad
+  
+=right($dist, $pad)
+  float: right
+  
+.content_navigation
+  border-color: $blue
+  color: $blue - #111
+  
+  &:hover
+    opacity: .9
+    
+  
+.border
+  padding: $margin / 2
+  margin: $margin / 2
+  border-color: $blue  
+
+#data
+  +left(10px, 5%)
+  $var: 200px
+  +table-scaffolding($var, rgb(100, 200, 255), 500)

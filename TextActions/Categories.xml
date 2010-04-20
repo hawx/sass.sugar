@@ -1,0 +1,11 @@
+<action-categories>
+	
+	<category id="actions.SASS" show="sub">
+		<title>SASS</title>
+	</category>
+	
+	<category id="sass.tools" show="inline separated"></category>
+	<category id="sass.tools.Snippets" show="inline separated"></category>
+	<category id="sass.version" show="inline separated"></category>
+	
+</action-categories>

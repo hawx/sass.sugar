@@ -1,0 +1,151 @@
+*, a, abbr, acronym, address, area, b, base, bdo, big, blockquote, body, br, button, caption, cite, code, col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, frame, frameset, h1, h2, h3, h4, h5, h6, head, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, link, map, meta, noframes, noscript, object, ol, optgroup, option, p, param, pre, q, samp, script, select, span, strong, style, sub, sup, table, tbody, td, textarea, tfoot, th, thead, title, tr, tt, ul, var {
+  display: none; }
+
+#id .class a #another .oncemore li ul #id-again_1, #item:active:after:before:first-child:hover, #item[href="#important"] {
+  color: white; }
+
+* {
+  azimuth: center-left;
+  background: lime url('smiley.gif') no-repeat fixed center;
+  background-attachment: fixed;
+  background-color: lime;
+  background-image: url("smiley.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: lime;
+  background-image: url("smiley.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 5px solid red;
+  border-bottom: 5px solid red;
+  border-bottom-color: red;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-color: red;
+  border-collapse: collapse;
+  border-left: 5px solid red;
+  border-left-color: red;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-right: 5px solid red;
+  border-right-color: red;
+  border-right-style: solid;
+  border-right-width: 5px;
+  border-top: 5px solid red;
+  border-top-color: red;
+  border-top-style: solid;
+  border-top-width: 5px;
+  border-collapse: collapse;
+  border-bottom: 1px solid;
+  border-left: 1px dashed;
+  border-top: 5px solid;
+  border-right-color: red;
+  border-right-style: dotted;
+  border-right-width: 200px;
+  bottom: 10px;
+  caption-side: bottom;
+  clear: both;
+  clip: rect(0px, 60px, 200px, 0px);
+  color: #fff000, #643219;
+  content: " (" attr(href) ")";
+  counter-increment: section;
+  counter-reset: section;
+  cursor: help;
+  direction: rtl;
+  display: none;
+  empty-cells: hide;
+  float: left;
+  font: italic bold 12px/30px Georgia, serif;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 700;
+  height: 1230px;
+  left: 20px;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  list-style: square inside url("/images/blueball.gif");
+  list-style-image: url("/images/blueball.gif");
+  list-style-position: inside;
+  list-style-type: square;
+  list-style-image: url("/images/blueball.gif");
+  list-style-position: inside;
+  list-style-type: square;
+  margin: 23px;
+  margin-bottom: 12px;
+  margin-left: 4px;
+  margin-right: 2px;
+  margin-top: 2000000px;
+  margin-bottom: 1px;
+  margin-left: 5px;
+  margin-right: 300em;
+  margin-top: 50%;
+  max-height: 200px;
+  max-width: 1px;
+  min-height: 2px;
+  min-width: 999px;
+  outline: lime dotted thick;
+  outline-color: lime;
+  outline-style: dotter;
+  outline-width: thick;
+  outline-color: red;
+  outline-style: inherit;
+  outline-width: thick;
+  overflow: scroll;
+  padding: 2px;
+  padding-bottom: 4px;
+  padding-left: 3px;
+  padding-right: 2px;
+  padding-top: 1px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  page-break-after: always;
+  page-break-before: always;
+  page-break-inside: avoid;
+  position: absolute;
+  right: 10px;
+  table-layout: fixed;
+  text-align: left;
+  text-decoration: underline;
+  text-indent: 50px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  top: 10px;
+  vertical-align: baseline;
+  visibility: hidden;
+  width: 460px;
+  word-spacing: 0.2em !important;
+  z-index: 999;
+  -webkit-box-shadow: 5px;
+  -o-box-shadow: 5px;
+  -moz-box-shadow: 5px; }
+
+.content_navigation {
+  border-color: #3bbfce;
+  color: #2aaebd; }
+  .content_navigation:hover {
+    opacity: 0.9; }
+
+.border {
+  padding: 8px;
+  margin: 8px;
+  border-color: #3bbfce; }
+
+#data {
+  float: left;
+  margin-left: 10px;
+  padding-left: 5%; }
+  #data th {
+    text-align: center;
+    font-weight: bold; }
+  #data td, #data th {
+    padding: 2px; }

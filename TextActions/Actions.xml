@@ -1,0 +1,38 @@
+<action-recipes>
+	
+	<action id="at.hawx.TextActions.SASS.Convert" category="actions.SASS">
+		<class>TEALoader</class>
+		<title>Convert to SASS</title>
+		<setup>
+			<script>to_sass.rb</script>
+			<input>document</input>
+			<output>document</output>
+			<undo_name>Convert to CSS</undo_name>
+			<syntax-context>css, css *</syntax-context>
+		</setup>
+	</action>
+	
+	<action id="at.hawx.TextActions.CSS.Convert" category="actions.SASS">
+	  <class>TEALoader</class>
+		<title>Convert to CSS</title>
+		<setup>
+			<script>to_css.rb</script>
+			<input>document</input>
+			<output>document</output>
+			<undo_name>Convert to SASS</undo_name>
+			<syntax-context>sass, sass *</syntax-context>
+		</setup>
+	</action>
+	
+	<action id="at.hawx.TextActions.CSS.Create" category="actions.SASS">
+	  <class>TEALoader</class>
+		<title>Create CSS</title>
+		<key-equivalent>cmd shift C</key-equivalent>
+		<setup>
+			<script>create_css.rb</script>
+			<input>document</input>
+			<syntax-context>sass, sass *</syntax-context>
+		</setup>
+	</action>
+	
+</action-recipes>
