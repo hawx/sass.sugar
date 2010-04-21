@@ -1,7 +1,7 @@
-#!/usr/local/bin/ruby
+#!/usr/bin/env ruby
 
-require 'haml'
-require 'haml/exec'
+require File.join( File.dirname(__FILE__), 'haml/lib/haml' )
+require File.join( File.dirname(__FILE__), 'haml/lib/haml/exec' )
 
 input = STDIN.read
 Dir.chdir(ENV['E_DIRECTORY'])
