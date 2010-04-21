@@ -35,4 +35,15 @@
 		</setup>
 	</action>
 	
+	<action id="at.hawx.TextActions.CSS.SingleCreate" category="actions.SASS">
+	  <class>TEALoader</class>
+		<title>Create Single CSS</title>
+		<key-equivalent>cmd ctrl C</key-equivalent>
+		<setup>
+			<script>create_single_css.rb</script>
+			<input>document</input>
+			<syntax-context>sass, sass *</syntax-context>
+		</setup>
+	</action>
+	
 </action-recipes>
