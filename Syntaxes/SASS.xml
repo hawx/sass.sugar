@@ -3,6 +3,7 @@
     <zones>
    
     	<include collection="at-rules"/>
+    	<include collection="at-sass"/>
     	
     	<include collection="sass-variable"/>
     	<include collection="sass-mixin"/>
@@ -22,6 +23,8 @@
 			    <ends-with>^\s*\n</ends-with>
 			   	
 			   	<subzones>
+			   	  <include collection="at-sass"/>
+			   	  <include collection="sass-variable"/>
 			   		<include collection="properties"/>
 			   		<include collection="selectors"/>
 						<include collection="comments"/>
@@ -218,12 +221,96 @@
 				</starts-with>
 				<ends-with>
 					<expression>$</expression>
-				    <capture number="0" name="punctuation.definition.end"/>
+			    <capture number="0" name="punctuation.definition.end"/>
 				</ends-with>
 				<subzones>
 					<include collection="file-name"/>
 				</subzones>	
 			</zone>
+		</collection>
+		
+		<collection name="at-sass">
+		  <!-- @mixin -->
+		  <zone name="at-rule.mixin.definition.sass">
+		    <starts-with>
+		      <expression>((@)mixin)\s([a-zA-Z0-9_-]+)</expression>
+		      <capture number="1" name="keyword.control"/>
+		      <capture number="2" name="punctuation.definition.keyword"/>
+		      <capture number="3" name="mixin.name.sass"/>
+		    </starts-with>
+		    <ends-with>$</ends-with>
+		    <subzones>
+		      <include collection="arg-list"/>
+		    </subzones>
+		  </zone>
+		  <!-- @include -->
+		  <zone name="at-rule.mixin.include.sass">
+		    <starts-with>
+		      <expression>((@)include)\s([a-zA-Z0-9_-]+)</expression>
+		      <capture number="1" name="keyword.control"/>
+		      <capture number="2" name="punctuation.definition.keyword"/>
+		      <capture number="3" name="mixin.name.sass"/>
+		    </starts-with>
+		    <ends-with>$</ends-with>
+		    <subzones>
+		      <include collection="arg-list"/>
+		    </subzones>
+		  </zone>
+		  <!-- @media -->
+		  <zone name="at-rule.media.sass">
+		    <starts-with>
+		      <expression>^\s*((@)media\b)</expression>
+		      <capture number="1" name="keyword.control"/>
+		      <capture number="2" name="punctuation.definition.keyword"/>
+		    </starts-with>
+		    <ends-with>$</ends-with>
+		    <subzones>
+		      <zone name="media-type">
+		        <expression>(screen|print|handheld)</expression>
+		      </zone>
+		      <zone name="connector">
+		        <expression>(and|or)</expression>
+		      </zone>
+		      <zone name="condition">
+		        <begins-with>
+		          <expression>(</expression>
+		          <capture number="0" name="punctuation.definition.begin"/>
+		        </begins-with>
+		        <ends-with>
+		          <expression>)</expression>
+		          <capture number="0" name="punctuation.definition.end"/>
+		        </ends-with>
+		        <subzones>
+		          <zone name="property-name">
+		            <expression>[a-zA-Z0-9_-]+(?=:)</expression>
+		          </zone>
+		          <include collection="values"/>
+		        </subzones>
+		      </zone>
+		    </subzones>
+		  </zone>
+		</collection>
+		
+		<!-- Arg-List (should handle assignments as well!)-->
+		<collection name="arg-list">
+		  <zone name="arg-list.sass">
+		    <begins-with>
+		      <expression>(</expression>
+		      <capture number="0" name="punctuation.definition.begin"/>
+		    </begins-with>
+		    <ends-with>
+		      <expression>)</expression>
+		      <capture number="0" name="punctuation.definition.end"/>
+		    </ends-with>
+		    
+		    <subzones>
+		    	<zone name="punctuation.separator">
+		    		<expression>,</expression>
+		    	</zone>
+		    	<include collection="constants"/>
+		    	<include collection="sass-variable"/>
+		    </subzones>
+		  </zone>
 		</collection>
 		
 		<!-- Variables -->

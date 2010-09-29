@@ -2,7 +2,7 @@
 
 <settings>
 
-	<language id="text.sass">
+	<language id="styling.sass">
 		
 		<!-- Note: root-zone will be deprecated in the next beta and replaced by syntax-name -->
 		<root-zone>styling.sass</root-zone>

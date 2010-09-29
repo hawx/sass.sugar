@@ -24,8 +24,12 @@ sass > property-assigner, mixin.sass > property-assigner {
 	color: #3a77bf;
 }
 
-sass > property-value, mixin.sass > property-value, variable.style.sass > property-name {
+sass property-value, mixin.sass property-value, variable.style.sass property-name {
 	color: #43a202;
+}
+
+sass property-value punctuation.separator {
+  color: #000000;
 }
 
 sass.at-rule string {
@@ -44,6 +48,10 @@ mixin.definition.sass {
 
 mixin.sass, mixin.sass > punctuation {
 	color: #d4430d;
+}
+
+at-rule.mixin.definition mixin.name, at-rule.mixin.include mixin.name {
+  color: #3a77bf;
 }
 
 file.sass {

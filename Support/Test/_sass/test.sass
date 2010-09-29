@@ -194,21 +194,44 @@
 $blue: #3bbfce
 $margin: 16px
 
+@import something.sass
+
+//// MIXINS
+// new
+@mixin test
+  border: 1px red
+    
+@mixin test-args($arg, $side)
+  padding: $arg
+  text-align: $side
+  
+@mixin default($arg: 5px, $something)
+  padding: $arg $something
+    
+// old
+=right
+  float: right
+  
 =table-scaffolding($var, $color, $size)
   th
-    text-align: center
-    font-weight: bold
+    text-align: "center"
+    text-align: 'left'
+    font-weight: bold !important
   td, th
     padding: 2px
 
-=left($dist, $pad)
-  float: left
-  margin-left: $dist
-  padding-left: $pad
-  
-=right($dist, $pad)
-  float: right
-  
+//// INCLUDES
+// new
+p
+  @include test
+  @include test-args(5px, left)
+
+//old
+#data
+  +right
+  +table-scaffolding($var, rgb(100, 200, 255), 500)
+
+//// VARIABLES
 .content_navigation
   border-color: $blue
   color: $blue - #111
@@ -226,3 +249,10 @@ $margin: 16px
   +left(10px, 5%)
   $var: 200px
   +table-scaffolding($var, rgb(100, 200, 255), 500)
+  
+//// MEDIA
+@media screen and (max-device-width: 480px)
+  body
+    width: 400px
+    font-size: 18px
+    
