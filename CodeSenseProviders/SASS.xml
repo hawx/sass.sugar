@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense>
 
+  <provider>
+    <selector>sass</selector>
+    <completions>com.sass.at-rule</completions>
+    <complete-match>@[a-zA-Z0-9-]*</complete-match>
+  </provider>
+
 	<provider>
 		<selector>sass > property-name:capture(name) + property-value - punctuation.separator</selector>
 		<completions>com.sass.property.${name}</completions>

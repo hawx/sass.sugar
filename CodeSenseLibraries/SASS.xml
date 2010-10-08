@@ -5,6 +5,13 @@
 		<confirm-partial characters="-" />
 	</behavior>
 	
+	<set name="com.sass.at-rule">
+	  <completion string="@media" />
+	  <completion string="@import" />
+	  <completion string="@mixin" />
+	  <completion string="@include" />
+	</set>
+	
 	<set name="com.sass.property.azimuth">
 		<completion string="left-side" />
 		<completion string="far-left" />

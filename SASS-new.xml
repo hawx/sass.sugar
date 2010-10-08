@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<syntax name="styling.sass">
+    <zones>
+   
+    	<include collection="at-rules"/>
+    	
+    	<include collection="variables"/>
+    	<include collection="mixins"/>
+    	<include collection="comments"/>
+    	
+		  <include collection="style-lists"/>
+    	
+    </zones>
+    
+  
+  
+  <library>
+  
+    <collection name="at-rules">
+      <zone name="at-rule.import">
+        <starts-with>
+            <expression>^\s*((@)import\b)</expression>
+            <capture number="1" name="keyword.control"/>
+            <capture number="2" name="punctuation.definition.keyword"/>
+        </starts-with>
+        <ends-with>
+        	<expression>$</expression>
+            <capture number="0" name="punctuation.definition.end"/>
+        </ends-with>
+      </zone>
+    </collection>
+    
+    <!--
+      This is meant to match a list of styles belonging to one selector, eg.
+      
+      p
+        border: 1px solid red
+        background: aqua
+    
+    -->
+    <collection name="style-lists">
+      <zone name="style-list">
+        <!-- begins with #, ., &, >, or a letter -->
+        <starts-with>^\s*(?=([.#&amp;>a-zA-Z]))</starts-with>
+        <!-- ends with a blank line (not exactly the best way of finding the end) -->
+        <ends-with>^\s*\n</ends-with>
+        
+        <subzones>
+          <include collection="selectors"/>
+          <include collection="properties"/>
+          <include collection="comments"/>
+        </subzones>
+      </zone>
+    </collection>
+    
+    <!--
+      Selectors can be any of the following...
+        #somestring
+        .somestring
+        somestring
+        &somestring
+        somestring:somestring
+        +somestring
+        somestring[somestring=somestring] or with quotes or double quotes
+        *
+        
+    -->
+    <collection name="selectors">
+      <zone name="selector">
+        <expression>((\+|#|\.|&)?[a-zA-Z0-9_:\[\]='"-]+|\*)</expression>
+      </zone>
+    </collection>
+    
+    <!--
+      The property name is before a : and the value anything after it, eg.
+        border: 12px
+        name: value
+        
+      There may be multiple values also possibly separated with a comma.
+        border: 12px solid red, 10px solid blue
+    
+    -->
+    <collection name="properties">
+      <zone name="property-name">
+        <expression>(?=[a-z-])[a-z-]*(?=:)</expression>
+      </zone>
+      <zone name="property-value">
+        <starts-with>
+          <expression>(:)(?=\s*)</expression>
+          <capture number="0" name="punctuation.seperator.key-value"/>
+        </starts-with>
+        <ends-with>
+          <expression>\n</expression>
+        </ends-with>
+      </zone>
+    </collection>
+    
+    
+    <collection name="values">
+      
+    </collection>
+    
+    <!--
+      A comment is any line that begins with // or any text surrounded by
+      /* and */
+    -->
+    <collection name="comments">
+      <zone name="comment.block">
+        <starts-with>
+            <expression>/\*</expression>
+            <capture number="0" name="punctuation.begin"/>
+        </starts-with>
+        <ends-with>
+            <expression>^\s*(?!\*)$</expression>
+            <capture number="0" name="punctuation.end"/>
+        </ends-with>
+      </zone>
+    </collection>
+    
+    <!-- 
+      A mixin is either +somestring with optional arguments followed by properties
+      or @mixin somestring with optional arguments followed by properties
+    -->   
+    <collection name="mixins">
+      <zone name="mixin.definition">
+        <expression>(\=|@mixin\s+)([a-zA-Z0-9_-]+)(\(.*\))?$</expression>
+      </zone>
+      <zone name="mixin">
+        <expression>(\+|@include\s+)([a-zA-Z0-9_-]+)(\(.*\))?$</expression>
+      </zone>
+    </collection>
+    
+    <!-- 
+      A variable is $somestring and is defined with $somestring: values
+    -->
+    <collection name="variables">
+      <zone name="variable.definition">
+        <starts-with>
+          <expression>(\$)(.+)(?=:)</expression>
+          <capture number="1" name="punctuation.variable"/>
+          <capture number="2" name="variable.property-name"/>
+        </starts-with>
+        <ends-with>
+          <expression>$</expression>
+        </ends-with>
+        <subzones>
+          <include collection="values"/>
+        </subzones>
+      </zone>
+      <zone name="variable">
+        <expression>(\$)([a-zA-Z0-9_-]+)</expression>
+        <capture number="1" name="punctuation.variable"/>
+        <capture number="2" name="variable.property-name"/>
+      </zone>
+    </collection>
+  
+  </library>
+  
+</syntax>
