@@ -89,7 +89,7 @@
 			        <capture number="0" name="punctuation.begin"/>
 			    </starts-with>
 			    <ends-with>
-			        <expression>^\s*(?!\*)$</expression>
+			        <expression>\s+.*\*/</expression>
 			        <capture number="0" name="punctuation.end"/>
 			    </ends-with>
 			</zone>
