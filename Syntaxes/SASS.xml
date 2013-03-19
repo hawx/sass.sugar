@@ -110,7 +110,7 @@
 				</starts-with>
 				<ends-with>
 					<expression>;</expression>
-                    <capture number="0" name="punctuation.end"/>
+					<capture number="0" name="punctuation.end"/>
 				</ends-with>
 				<subzones>
 					<include collection="comments"/>
