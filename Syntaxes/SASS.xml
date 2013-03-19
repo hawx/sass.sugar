@@ -69,7 +69,7 @@
 		<collection name="properties">
 			<include collection="sass-mixin"/>
 			<zone name="property-name">
-				<expression>(?=[a-z-])[a-z-]*(?=: | =)</expression>
+				<expression>(?=[a-z-])[a-z-]*(?=:| =)</expression>
 			</zone>
 			<include collection="values"/>
 		</collection>
@@ -89,7 +89,7 @@
 			        <capture number="0" name="punctuation.begin"/>
 			    </starts-with>
 			    <ends-with>
-			        <expression>\s+.*\*/</expression>
+			        <expression>\*/</expression>
 			        <capture number="0" name="punctuation.end"/>
 			    </ends-with>
 			</zone>
@@ -105,11 +105,12 @@
 		<collection name="values">
 			<zone name="property-value">
 				<starts-with>
-					<expression>(=)|(:)(?=\s)</expression>
+					<expression>(=)|(:)(?=)</expression>
 					<capture number="0" name="punctuation.separator.key-value.sass"/>
 				</starts-with>
 				<ends-with>
-					<expression>\n</expression>
+					<expression>;</expression>
+					<capture number="0" name="punctuation.end"/>
 				</ends-with>
 				<subzones>
 					<include collection="comments"/>
