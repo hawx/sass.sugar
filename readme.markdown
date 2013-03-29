@@ -1,6 +1,10 @@
 # SASS Sugar
 
-To install the sugar just open terminal and type:
+To install: download [Sass.sugar.zip](http://sss.hawx.me/latest/Sass.sugar.zip), unzip by double clicking it, then drag 
+into `~/Library/Application Support/Espresso/Sugars` (you may need to use `CMD+SHIFT+G` in the Finder to get to 
+`Library`). 
+
+Or to install the sugar using `git` just open the terminal and type:
 
     cd ~/Library/Application\ Support/Espresso/Sugars
     git clone git://github.com/hawx/Sass.sugar.git
