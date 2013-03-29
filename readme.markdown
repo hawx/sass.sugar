@@ -29,7 +29,7 @@ __NOTE__: You cannot set per-project settings for this.
 
 There are two options for this:
 
-1. Open `Sass.sugar/Support/create_css.rb` and change the variables being set on lines 9 and 10 to something like:
+1. Open `Sass.sugar/Support/Scripts/create_css.rb` and change the variables being set on lines 9 and 10 to something like:
 
         sass = '_sass'
         css = 'css'
