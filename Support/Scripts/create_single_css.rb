@@ -7,7 +7,7 @@ input = STDIN.read
 Dir.chdir(ENV['E_DIRECTORY'])
 
 files = "#{ENV['E_FILENAME']}:"
-files += "#{ENV['E_FILENAME'].gsub('.sass', '.css')}"
+files += "#{ENV['E_FILENAME'].gsub(/\.s(c|a)ss/, '.css')}"
 
 arg = ['--update', files]
 o = Haml::Exec::Sass.new(arg)
