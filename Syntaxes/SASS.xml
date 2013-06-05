@@ -289,6 +289,15 @@
 		      </zone>
 		    </subzones>
 		  </zone>
+		  <!-- @extend -->
+		  <zone name="at-rule.extend.sass">
+		    <starts-with>
+		      <expression>((@)extend)</expression>
+		      <capture number="1" name="keyword.control"/>
+		      <capture number="2" name="punctuation.definition.keyword"/>
+		    </starts-with>
+		    <ends-with>$</ends-with>
+		  </zone>
 		</collection>
 		
 		<!-- Arg-List (should handle assignments as well!)-->
