@@ -134,6 +134,10 @@
 							</zone>
 						</subzones>
 					</zone>
+					
+					<zone name="keyword.default">
+					  <expression>!default</expression>
+					</zone>
 				</subzones>
 			</zone>
 		</collection>

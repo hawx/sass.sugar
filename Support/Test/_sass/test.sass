@@ -191,7 +191,7 @@
 // Test SASS-ness
 // @import test.sass
 
-$blue: #3bbfce
+$blue: #3bbfce !default
 $margin: 16px
 
 @import something.sass
@@ -244,12 +244,13 @@ p
   @extend #data
   padding: $margin / 2
   margin: $margin / 2
-  border-color: $blue  
+  border-color: $blue
 
 #data
   +left(10px, 5%)
   $var: 200px
   +table-scaffolding($var, rgb(100, 200, 255), 500)
+
   
 //// MEDIA
 @media screen and (max-device-width: 480px)
