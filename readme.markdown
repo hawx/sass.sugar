@@ -9,6 +9,7 @@ Or to install the sugar using `git` just open the terminal and type:
     cd ~/Library/Application\ Support/Espresso/Sugars
     git clone git://github.com/hawx/Sass.sugar.git
     
+__NOTE:__ This is meant for the SASS style syntax and has extremely limited support for SCSS syntax. Do not send pull requests adding support for SCSS features, as they will not be merged!
 
 ## SASS Settings
 

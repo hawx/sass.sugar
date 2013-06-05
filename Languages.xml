@@ -9,7 +9,6 @@
 		<name>SASS</name>
 		<detectors>
 			<extension>sass</extension>
-			<extension>scss</extension>
 		</detectors>
 		
 		<default-extension>sass</default-extension>
