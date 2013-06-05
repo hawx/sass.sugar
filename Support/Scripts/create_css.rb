@@ -20,9 +20,9 @@ else
 end
 
 if css != ""
-  files += "#{ENV['CSS_DIRECTORY']}/#{ENV['E_FILENAME'].gsub('.sass', '.css')}"
+  files += "#{ENV['CSS_DIRECTORY']}/#{ENV['E_FILENAME'].gsub(/\.s(a|c)ss/, '.css')}"
 else
-  files += "#{ENV['E_FILENAME'].gsub('.sass', '.css')}"
+  files += "#{ENV['E_FILENAME'].gsub(/\.s(a|c)ss/, '.css')}"
 end
 
 arg = ['--update', files]
