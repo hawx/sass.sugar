@@ -109,8 +109,7 @@
 					<capture number="0" name="punctuation.separator.key-value.sass"/>
 				</starts-with>
 				<ends-with>
-					<expression>;</expression>
-					<capture number="0" name="punctuation.end"/>
+					<expression>\n</expression>
 				</ends-with>
 				<subzones>
 					<include collection="comments"/>
@@ -341,7 +340,7 @@
 			<zone name="mixin.sass">
 				<starts-with>
 					<expression>(\+)([a-zA-Z0-9_-]+)</expression>
-					<capture number="1" name="punctuation.definition.mixin.sass"/>
+					<capture number="1" name="punctuation.definition.keyword"/>
 					<capture number="2" name="mixin.name.sass"/>
 					<capture number="3" name="punctuation.definition.begin"/>
 				</starts-with>
