@@ -191,8 +191,32 @@
 // Test SASS-ness
 // @import test.sass
 
+@warn "what"
+@debug 20px + 60px
+
 $blue: #3bbfce !default
 $margin: 16px
+
+@if $margin == 16px
+  @warn "ok"
+@else if $margin == 17px
+  @warn "a little over"
+@else
+  @warn "no way!"
+  
+@for $i from 1 through 3
+  h#{$i}
+    margin: 2em * $i
+
+@each $animal in puma, sea-slug, egret, salamander
+  .#{$animal}-icon
+    background-image: url('/images/#{$animal}.png')
+  
+@while $i > 0
+  .item-#{$i} 
+    width: 2em * $i
+  $i: $i - 2
+
 
 @import something.sass
 
